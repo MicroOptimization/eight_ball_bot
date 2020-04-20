@@ -28,8 +28,7 @@ def get_message():
                          "Outlook not so good.",
                          "Very doubtful."]
     
-    index = random.randint(0, len(possible_messages))
-    print(len(possible_messages))
+    index = random.randint(0, len(possible_messages) - 1)
     message = possible_messages[index]
     
     return message
