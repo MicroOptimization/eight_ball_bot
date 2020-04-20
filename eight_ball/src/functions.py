@@ -29,6 +29,7 @@ def get_message():
                          "Very doubtful."]
     
     index = random.randint(0, len(possible_messages))
+    print(len(possible_messages))
     message = possible_messages[index]
     
     return message
