@@ -32,5 +32,3 @@ def get_message():
     message = possible_messages[index]
     
     return message
-
-print(get_message())
