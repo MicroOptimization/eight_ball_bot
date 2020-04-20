@@ -5,6 +5,7 @@ Github: github.com/MicroOptimization
 ===========================================
 """
 import discord
+import key_retriever
 
 class MyClient(discord.Client):
     async def on_ready(self):
@@ -15,6 +16,6 @@ class MyClient(discord.Client):
 
 client = MyClient()
 
-key = "" #Insert your key here
+key = key_retriever.get_key() #Insert your key here
 
 client.run(key)
