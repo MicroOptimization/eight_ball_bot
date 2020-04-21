@@ -27,7 +27,7 @@ class MyClient(discord.Client):
         text = message.content
         words = text.split(" ")
 
-        if len(words) >= 2 and words[1] == "help":
+        if len(words) >= 2 and words[1].lower() == "help":
             await message.channel.send("To talk to me, begin with 'qqox, <message>'")
         elif words[0].lower() == "qqox,":
             await message.author.send('Qqox is dead.')
