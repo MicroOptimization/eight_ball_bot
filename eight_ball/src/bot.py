@@ -29,9 +29,9 @@ class MyClient(discord.Client):
 
         if len(words) >= 2 and words[1] == "help":
             await message.channel.send("To talk to me, begin with 'qqox, <message>'")
-        elif words[0] == "qqox,".lower():
+        elif words[0].lower() == "qqox,":
             await message.author.send('Qqox is dead.')
-        elif words[0] == "meb," or words[0] == "mge," or (len(words) >= 3 and words[0].lower() == "magic" and words[1].lower() == "eight" and words[2].lower() == "ball,"):
+        elif words[0].lower() == "meb," or words[0].lower() == "mge," or (len(words) >= 3 and words[0].lower() == "magic" and words[1].lower() == "eight" and words[2].lower() == "ball,"):
             await message.channel.send("The Magic Eight Ball has Spoken:")
             await message.channel.send("'{}'".format(functions.get_message()))
 
